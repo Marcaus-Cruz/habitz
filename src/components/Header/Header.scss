@@ -1,0 +1,36 @@
+@import '../mixins.scss';
+
+.header {
+	font-size: 4vmin;
+	@include flex-container(column);
+
+	.container.top {
+		@include flex-container(row, nowrap, flex-start, center);
+
+		.media-container {
+			img {
+				max-width: 10vmax;
+				max-height: 10vmax;
+			}
+		}
+
+		.title {
+			font-size: 1em;
+			padding: 0em 1em;
+		}
+	}
+
+	.container.center {
+		@include flex-container($justify: center);
+		font-size: 0.8em;
+		margin: 1em;
+	}
+
+	.container.bottom {
+		@include flex-container($justify: space-evenly);
+
+		.btn {
+			font-size: 0.6em;
+		}
+	}
+}

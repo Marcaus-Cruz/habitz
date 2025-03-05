@@ -1,0 +1,23 @@
+@import '../mixins.scss';
+
+.btn {
+	@include flex-container(row, nowrap, center, center);
+	@include un-button();
+
+	--btn-main-color: white;
+	--btn-secondary-color: black;
+
+	color: var(--btn-secondary-color);
+	padding: 0.5em 1em;
+	background: var(--btn-main-color);
+	border: 0.5vmin solid var(--btn-secondary-color);
+	border-radius: 1em;
+
+	&:hover,
+	&:focus {
+		color: var(--btn-main-color);
+		background: var(--btn-secondary-color);
+		// border-color: var(--btn-main-color);
+        cursor: pointer;
+	}
+}
